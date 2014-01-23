@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+  <script src="../third_party/jquery-1.8.2.min.js"></script>
+  <script src="../third_party/raphael-2.1.0.min.js"></script>
+  <script src="../morris.js"></script>
+  <script src="lib/prettify.js"></script>
+  <script src="lib/example.js"></script>
+  <link rel="stylesheet" href="lib/example.css">
+  <link rel="stylesheet" href="lib/prettify.css">
+  <link rel="stylesheet" href="../morris.css">
+</head>
+<body>
+<h1>Value Goals</h1>
+<div id="graph"></div>
+<pre id="code" class="prettyprint linenums">
+var decimal_data = [];
+for (var x = 0; x <= 360; x += 10) {
+  decimal_data.push({
+    x: x,
+    y: Math.sin(Math.PI * x / 180).toFixed(4)
+  });
+}
+window.m = Morris.Line({
+  element: 'graph',
+  data: decimal_data,
+  xkey: 'x',
+  ykeys: ['y'],
+  labels: ['sin(x)'],
+  parseTime: false,
+  goals: [-1, 0, 1]
+});
+</pre>
+</body>

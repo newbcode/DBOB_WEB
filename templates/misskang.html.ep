@@ -1,0 +1,20 @@
+% layout 'index';
+% title '마이피플봇';
+
+<div class="container">
+        <p class="lead ">
+        마이피플 봇(Misskang)을 추가합니다
+        </p>
+
+<div class="row-fluid">
+                <div class="well">
+                        <div class="row-fluid">
+                                <h4>마이피플봇 misskang을 추가 하시려면 마이피플 봇에서 친구ID 등록에 misskang.bot을 추가하시면 됩니다.<br>
+                                마이피플에서는 한남오피스 기준으로 키워드 아침/점심/저녁 and 내일아침/내일점심/내일저녁 
+                                and 어제아침/어제점심/어제저녁 식단을 제공합니다.<br><br>
+
+                                ex) 점심 (시제 키워드를 빼면 기본적으로 오늘을 기준으로 식단알림을 합니다.)<br>
+                                ex) 내일저녁 ( 오늘기준으로 내일 저녁 식단을 알림합니다.</h4> 
+                        </div>
+                </div>
+        </div>

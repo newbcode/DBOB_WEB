@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+
+<head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="<%= $self->config->{app}->{description} %>">
+	<meta name="author" content="<%= $self->config->{app}->{author} %>">
+
+	<title>DBOB</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+
+	<!-- Add custom CSS here -->
+	<link href="stlish/css/stylish-portfolio.css" rel="stylesheet">
+	<link href="stlish/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- Full Page Image Header Area -->
+	<div id="top" class="header">
+		<div class="vert-text">
+			<h1>Daum Bob bOB BOB</h1>
+			<h2> <em>밥</em> 먹고 합시다. </h2>
+			<a href="/graph" class="btn btn-default btn-lg">밥 반찬 통계(그래프)</a>
+			<a href="/table" class="btn btn-success btn-lg">밥 반찬 검색(테이블)</a>
+			<a href="https://twitter.com/dbobbobbob" class="btn btn-primary" data-show-count="false" data-lang="en" data-size="large">트위터 팔로우</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			<a href="/misskang" class="btn btn-warning btn-lg">마이피플 봇(Misskang)</a>
+		</div>
+	</div>
+	<p>Copyright &copy; newbcode | Daum</p>
+	<!-- /Full Page Image Header Area -->
+
+	<!-- JavaScript -->
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="bootstrap/js/jquery.js"></script>
+
+
+
+	<!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+	<script>
+		$("#menu-close").click(function(e) {
+			e.preventDefault();
+			$("#sidebar-wrapper").toggleClass("active");
+		});
+	</script>
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#sidebar-wrapper").toggleClass("active");
+		});
+	</script>
+	<script>
+		$(function() {
+			$('a[href*=#]:not([href=#])').click(function() {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('html,body').animate({
+							scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					}
+				}
+			});
+		});
+	</script>
+
+</body>
+
+</html>
