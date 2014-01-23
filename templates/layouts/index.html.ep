@@ -60,12 +60,10 @@
                                         <div class="nav-collapse">
                                                 <ul class="nav">
                                                         <li><a href="/">홈</a></li>
-                                                        <li><a href="/table">밥/반찬 검색(테이블)</a></li>
                                                         <li><a href="/graph">반/반찬 그래프</a></li>
+                                                        <li><a href="/table">밥/반찬 검색(테이블)</a></li>
                                                         <li><a href="/misskang">마이피플 봇(Misskang)</a></li>
-						</ul>
-						<ul class="nav pull-right">
-							<li><a href="https://twitter.com/dbobbobbob" data-text="DBOB Tweeter Follow" data-via="dbobbobbob"> Twitter </a></li>
+                                                        <li><a href="/twitter">트위터 팔로우</a></li>
 						</ul>
                                         </div><!--/.nav-collapse -->
                                 </div>
@@ -75,12 +73,7 @@
                 <%= content %>
                 <hr>
 		<footer>
-		<p>&copy; 2014 newbcode | Daum
-		<!-- hitwebcounter Code START -->
-		<a href="http://www.hitwebcounter.com/htmltutorial.php" target="_blank">
-		<img src="http://hitwebcounter.com/counter/counter.php?page=5242848&style=0007&nbdigits=5&type=page&initCount=0" title="stats for websites" Alt="stats for websites"   border="0" >
-		</a><br/>
-		</p>
+		<p>&copy; 2014 newbcode | Daum </p>
 		</footer>
 
 		</div><!-- /CONTAINER -->

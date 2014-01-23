@@ -77,4 +77,9 @@ get '/misskang' => sub {
     
 } => 'misskang';
 
+get '/twitter' => sub {
+    my $self = shift;
+    
+} => 'twitter';
+
 app->start;

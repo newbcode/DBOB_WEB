@@ -1,0 +1,15 @@
+% layout 'index';
+% title '트위터팔로우';
+
+<div class="container">
+        <p class="lead ">
+         DBOB을 트위터 팔로우 합니다......조만간
+        </p>
+
+<div class="row-fluid">
+                <div class="well">
+                        <div class="row-fluid">
+                                <h2>Cooooooooooming Sooooooooooooon</h2>
+                        </div>
+                </div>
+        </div>
