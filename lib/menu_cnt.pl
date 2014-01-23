@@ -24,10 +24,18 @@ my $DBH = DBI->connect (
     },
 );
 
-my (@row, @menus, @new_row);
+my (@after_row, @row, @menus, @new_row);
 my %count;
 
-my $sth = $DBH->prepare(qq{ SELECT menu FROM week_menu });
+#메뉴를 insert 하기전 존재하는 메뉴를 확인하기 위한 배열
+my $sth = $DBH->prepare(qq{ SELECT menu FROM menu_cnt });
+$sth->execute();
+
+while (my @before_row = $sth->fetchrow_array ) {
+    push @after_row, $before_row[0];
+}
+
+$sth = $DBH->prepare(qq{ SELECT menu FROM week_menu });
 $sth->execute();
 
 while ( @row = $sth->fetchrow_array ) {
@@ -46,8 +54,13 @@ foreach my $b_menu ( @menus ) {
     $count{$b_menu}++;
 }
 
-$sth = $DBH->prepare(qq{ INSERT INTO `menu_cnt` (`menu`, `cnt`) VALUES (?,?) });
+foreach my $chk_menu ( @menus ) {
+    $sth = $DBH->prepare(qq{ UPDATE menu_cnt SET cnt=(cnt + ?) WHERE menu=?});
+    $sth->execute( $count{$chk_menu}, $chk_menu );
+}
 
-foreach my $a_menu ( sort keys %count ) {
-    $sth->execute( $a_menu, $count{$a_menu} );
+=pod
+$sth = $DBH->prepare(qq{ INSERT INTO `menu_cnt` (`menu`, `cnt`) VALUES (?,?) });
+foreach my $key (sort {$count{$b} <=> $count{$a};} keys %count) {
+    $sth->execute( $key, $count{$key} );
 }

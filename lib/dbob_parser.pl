@@ -145,10 +145,9 @@ else {
             }
             $days_cnt++;
         }
+        require "menu_cnt.pl";
     }
     else {
         die $response->status_line;
     }
 }
-
-#p %week_menu;
