@@ -7,7 +7,6 @@ use DateTime;
 use LWP::UserAgent;
 use Data::Printer;
 use Mojo::UserAgent;
-
 use Mojolicious::Lite;
 
 # Documentation browser under "/perldoc"
