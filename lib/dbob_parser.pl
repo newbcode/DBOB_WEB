@@ -1,4 +1,4 @@
-#!/usr//bin/env perl
+#!/usr/bin/env perl
 
 use strict;
 use warnings;
@@ -145,7 +145,7 @@ else {
             }
             $days_cnt++;
         }
-        require "menu_cnt.pl";
+        require "lib/menu_cnt.pl";
     }
     else {
         die $response->status_line;
