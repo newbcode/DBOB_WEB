@@ -56,6 +56,7 @@ foreach my $b_menu ( @menus ) {
 
 foreach my $chk_menu ( @menus ) {
     $sth = $DBH->prepare(qq{ UPDATE menu_cnt SET cnt=(cnt + ?) WHERE menu=?});
+    #$sth = $DBH->prepare(qq{ INSERT INTO `menu_cnt` (`cnt`, `menu`) VALUES (?,?) });
     $sth->execute( $count{$chk_menu}, $chk_menu );
 }
 
