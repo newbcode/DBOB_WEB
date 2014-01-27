@@ -1,4 +1,4 @@
-#!/usr/bin/env perl 
+#!/home/newbcode/perl5/perlbrew/perls/perl-5.14.2/bin/perl
 
 use strict;
 use warnings;
@@ -61,7 +61,7 @@ foreach my $chk_menu ( @menus ) {
 }
 
 =pod
-$sth = $DBH->prepare(qq{ INSERT INTO `menu_cnt` (`menu`, `cnt`) VALUES (?,?) });
+$sth = $DBH->prepare(qq{ INSERT INTO `menu_cnt` (`cnt`, `menu`) VALUES (?,?) });
 foreach my $key (sort {$count{$b} <=> $count{$a};} keys %count) {
     $sth->execute( $key, $count{$key} );
 }

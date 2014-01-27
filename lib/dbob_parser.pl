@@ -1,4 +1,4 @@
-#!/usr/bin/env perl
+#!/home/newbcode/perl5/perlbrew/perls/perl-5.14.2/bin/perl
 
 use strict;
 use warnings;
